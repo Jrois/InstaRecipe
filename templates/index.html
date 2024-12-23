@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flask Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Submit Your Data</h1>
+    <form action="/get_description_from_form" method="POST">
+        <label for="url">URL:</label>
+        <input type="text" id="url" name="url" required><br><br>
+        <button type="submit">Submit</button>
+    </form>
+    <p>{{ description }}</p>
+</body>
+</html>
